@@ -6,8 +6,9 @@ function isIdPresentInDom(id) {
     return document.getElementById(id);
 }
 
-function enableMessageDismiss() {
-  var close = document.getElementsByClassName("message close");
-}
-
-enableMessageDismiss();
+$( document ).ready(function() {
+  // helper to close flash messages
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').hide();
+  });
+});

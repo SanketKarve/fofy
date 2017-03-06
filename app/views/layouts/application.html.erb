@@ -9,30 +9,13 @@
   </head>
 
   <body>
-    <!-- Notice Flash -->
-    <% if notice %>
-      <div class="ui positive message">
-        <i class="close icon"></i>
-        <div class="header">
-          <%= notice %>
-        </div>
-      </div>
-    <% end %>
-
-    <!-- Alert Flash -->
-    <% if alert %>
-      <div class="ui negative message">
-        <i class="close icon"></i>
-        <div class="header">
-          <%= alert %>
-        </div>
-      </div>
-    <% end %>
 
     <% if user_signed_in? %>
       <%= render "shared/navbar" %>
+      <%= semantic_flash  %>
       <%= yield %>
     <% else %>
+      <%= semantic_flash  %>
       <%= yield %>
     <% end %>
   </body>
