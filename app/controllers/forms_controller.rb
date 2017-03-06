@@ -1,4 +1,6 @@
 class FormsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @forms = Form.all
   end
@@ -6,6 +8,9 @@ class FormsController < ApplicationController
   def new
     @form = Form.new
     @fields = Field.new
+		respond_to do |format|
+			format.html
+		end
   end
 
   def create
