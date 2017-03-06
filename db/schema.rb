@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306131100) do
+ActiveRecord::Schema.define(version: 20170306132533) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "field_data", force: :cascade do |t|
     t.integer  "form_data_id"
     t.text     "value"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["form_data_id"], name: "index_field_data_on_form_data_id", using: :btree
   end
 
   create_table "fields", force: :cascade do |t|
@@ -26,12 +30,14 @@ ActiveRecord::Schema.define(version: 20170306131100) do
     t.integer  "max"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["form_id"], name: "index_fields_on_form_id", using: :btree
   end
 
   create_table "form_data", force: :cascade do |t|
     t.integer  "form_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["form_id"], name: "index_form_data_on_form_id", using: :btree
   end
 
   create_table "forms", force: :cascade do |t|
@@ -39,6 +45,7 @@ ActiveRecord::Schema.define(version: 20170306131100) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_forms_on_token", using: :btree
   end
 
 end
