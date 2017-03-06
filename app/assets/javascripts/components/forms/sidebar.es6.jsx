@@ -18,8 +18,8 @@ class Sidebar extends React.Component {
   }
 
   onFieldClick(active) {
-    console.log(active);
     this.setState({active})
+    this.props.addFormFields();
   }
 
   render () {
