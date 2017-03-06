@@ -11,7 +11,11 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "shared/navbar" %>
-    <%= yield %>
+    <% if user_signed_in? %>
+      <%= render "shared/navbar" %>
+      <%= yield %>
+    <% else %>
+      <%= yield %>
+    <% end %>
   </body>
 </html>
