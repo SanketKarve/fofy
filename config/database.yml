@@ -1,19 +1,11 @@
 # PostgreSQL. Versions 9.1 and up are supported.
-#
-# Install the pg driver:
-#   gem install pg
-# On OS X with Homebrew:
-#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
-# On OS X with MacPorts:
-#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
-# On Windows:
-#   gem install pg
-#       Choose the win32 build.
-#       Install PostgreSQL and put its /bin directory on your path.
-#
-# Configure Using Gemfile
-# gem 'pg'
-#
+# NOTE: do the following steps to creaate database user
+## https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-14-04
+## sudo -u postgres createuser -s fofy
+## sudo -u postgres psql
+## \password fofy
+## \q
+
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -24,6 +16,9 @@ default: &default
 development:
   <<: *default
   database: fofy_development
+  host: localhost
+  username: fofy
+  password: fofy
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +53,9 @@ development:
 test:
   <<: *default
   database: fofy_test
+  host: localhost
+  username: fofy
+  password: fofy
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
