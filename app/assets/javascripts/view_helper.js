@@ -5,3 +5,9 @@ function getCSRFToken() {
 function isIdPresentInDom(id) {
     return document.getElementById(id);
 }
+
+function enableMessageDismiss() {
+  var close = document.getElementsByClassName("message close");
+}
+
+enableMessageDismiss();

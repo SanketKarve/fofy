@@ -1,0 +1,12 @@
+{
+  "name": "fofy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/shareitoapp/fofy.git",
+  "author": "aks <ankit.singhaniyaz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "vue": "^2.2.1"
+  }
+}
