@@ -1,0 +1,2 @@
+class FieldDatum < ApplicationRecord
+end
