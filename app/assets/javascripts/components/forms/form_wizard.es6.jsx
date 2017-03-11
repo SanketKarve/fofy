@@ -1,4 +1,12 @@
+
+
 class FormWizard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleFormComponentAdd = this.handleFormComponentAdd.bind(this);
+  }
+
   render () {
     return (
       <div>
@@ -81,7 +89,11 @@ class FormWizard extends React.Component {
 
             <div className="distance">
               <p className="control has-addons">
-                <a className="button is-large" title="Short Answer">
+                <a
+                  className="button is-large"
+                  title="Short Answer"
+                  onClick={this.props.handleFormComponentAdd}
+                >
                   <span className="icon is-medium">
                     <i className="fa fa-font"></i>
                   </span>

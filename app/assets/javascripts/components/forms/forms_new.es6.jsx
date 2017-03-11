@@ -1,5 +1,8 @@
 const FORM_WIZARD_TAB = "form_wizard";
 const FORM_SNIPPET_TAB = "form_snippet";
+const COMPONENT_TYPES = {
+  shortAnswer: "shortAnswer",
+};
 
 class FormsNew extends React.Component {
   constructor(props) {
@@ -10,14 +13,35 @@ class FormsNew extends React.Component {
         formName: "",
       },
     };
+    // helper method
+    this._cloneObject = this._cloneObject.bind(this);
+    this._cloneArray = this._cloneArray.bind(this);
 
     this.handleFormWizardStateChange = this.handleFormWizardStateChange.bind(this);
+    this.handleFormComponentAdd = this.handleFormComponentAdd.bind(this);
+  }
+
+  _cloneArray(array) {
+    return array.slice();
+  }
+
+  _cloneObject(object) {
+    return Object.assign({}, object);
   }
 
   handleFormWizardStateChange(fieldName, fieldValue) {
     let formWizard = Object.assign({}, this.state.formWizard);
     formWizard[fieldName] = fieldValue;
     this.setState({ formWizard });
+  }
+
+  handleFormComponentAdd(component) {
+    switch (component) {
+    case COMPONENT_TYPES.shortAnswer:
+
+      default:
+
+    }
   }
 
   render () {
@@ -39,6 +63,7 @@ class FormsNew extends React.Component {
           activeTab={this.state.activeTab}
           formWizard={this.state.formWizard}
           handleFormWizardStateChange={this.handleFormWizardStateChange}
+          handleFormComponentAdd={this.handleFormComponentAdd}
         />
 
         <FormSnippet
