@@ -12,6 +12,22 @@
  *
  *= require_tree .
  *= require_self
+
  */
 
- @import "semantic-ui";
+@import "bulma/bulma";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.distance {
+  margin: 2rem 0rem;
+}
+
+.is-verticle {
+  flex-direction: column;
+  width: 50px;
+}
+
+.red {
+  color: $red;
+}

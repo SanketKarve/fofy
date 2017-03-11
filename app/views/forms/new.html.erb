@@ -1,3 +1,131 @@
-<div class ="ui fluid-container">
-  <%= react_component('FormsNew', name: 'John') %>
-</div>
+<section class="section">
+  <div class="container">
+
+    <!-- preview and wizard tabs  -->
+    <div class="tabs">
+      <ul>
+        <li class="is-active"><a>Wizard</a></li>
+        <li><a>Preview</a></li>
+      </ul>
+    </div>
+
+
+    <!-- theme selector -->
+    <div class="is-clearfix">
+      <div class="is-pulled-right">
+        <label class="label">Theme</label>
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>Flat Theme</option>
+              <option>Bootstrap</option>
+            </select>
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <!-- form name  -->
+    <p class="control distance">
+      <input class="input is-large" type="text" placeholder="Form Name">
+    </p>
+
+    <!-- form block generator -->
+    <div class="distance">
+
+      <!-- short_answer:preview  -->
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <label class="label">
+              Name<sup class="red">*</sup>
+              <button class="delete is-pulled-right"></button>
+            </label>
+            <p class="control">
+              <input class="input" type="text" placeholder="Jhon Doe">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- short_answer:edit  -->
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <!-- question row -->
+            <label class="label">Question</label>
+            <p class="control">
+              <input class="input" type="text" value="Name">
+            </p>
+
+            <!-- placeholder row if applicable -->
+            <label class="label">Placeholder</label>
+            <p class="control">
+              <input class="input" type="text" value="Jhon Doe">
+            </p>
+
+            <!-- format selection -->
+            <div class="is-clearfix">
+              <div class="is-pulled-right">
+                  <span class="select">
+                    <select>
+                      <option>Text</option>
+                      <option>Number</option>
+                      <option>Email</option>
+                      <option>URL</option>
+                    </select>
+                  </span>
+              </div>
+
+              <!-- required switchary -->
+              <label class="switch on" for="switch" title="required">
+                <input type="checkbox" id="switch">
+                <div class="slider"> </div>
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="distance">
+        <p class="control has-addons">
+          <a class="button is-large" title="Short Answer">
+            <span class="icon is-medium">
+              <i class="fa fa-font"></i>
+            </span>
+            <!-- <span>Short Answer</span> -->
+          </a>
+
+          <a class="button is-large" title="Paragraph">
+            <span class="icon is-medium">
+              <i class="fa fa-align-left"></i>
+            </span>
+            <!-- <span>Paragraph</span> -->
+          </a>
+
+          <a class="button is-large" title="Multiple Choice">
+            <span class="icon is-medium">
+              <i class="fa fa-check-square"></i>
+            </span>
+            <!-- <span>Multiple Choice</span> -->
+          </a>
+
+          <a class="button is-large" title="Checkboxes">
+            <span class="icon is-medium">
+              <i class="fa fa-dot-circle-o"></i>
+            </span>
+            <!-- <span>Checkboxes</span> -->
+          </a>
+
+          <a class="button is-large" title="Dropdown">
+            <span class="icon is-medium">
+              <i class="fa fa-chevron-circle-down"></i>
+            </span>
+            <!-- <span>Dropdown</span> -->
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

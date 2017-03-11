@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
-    "vue": "^2.2.1"
+    "bulma": "^0.3.2"
   }
 }

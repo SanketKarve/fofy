@@ -12,10 +12,10 @@
 
     <% if user_signed_in? %>
       <%= render "shared/navbar" %>
-      <%= semantic_flash  %>
+      
       <%= yield %>
     <% else %>
-      <%= semantic_flash  %>
+
       <%= yield %>
     <% end %>
   </body>

@@ -1,10 +1,23 @@
-<div id="nav">
-  <div class="ui top stackable menu">
-    <div class="header item">
-      <i class="large sticky note icon"></i>
-      FoFy
+<nav class="nav has-shadow" id="nav">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item">
+        <span class="icon">
+          <i class="fa fa-sticky-note"></i>
+        </span>
+        <h1 class="title">FoFy</h1>
+      </a>
+      <a class="nav-item <%= class_active('forms') %>" href="/forms">Forms</a>
     </div>
-    <a class="<%= class_active('forms') %> item" href="/">Forms</a>
-    <a class="<%= class_active('form_data') %> item" href="/form_data">Results</a>
+    <div class="nav-right nav-menu">
+      <div class="nav-item">
+        <a class="button is-primary" href="/forms/new">
+          <span class="icon">
+            <i class="fa fa-plus"></i>
+          </span>
+          <span>New Form</span>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
+</nav>
