@@ -1,8 +1,11 @@
+const FORM_WIZARD_TAB = "form_wizard";
+const FORM_SNIPPET_TAB = "form_snippet";
+
 class FormsNew extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: 'wizard',
+      activeTab: FORM_WIZARD_TAB,
 
     };
   }
@@ -12,22 +15,22 @@ class FormsNew extends React.Component {
       <div>
         <div className="tabs">
           <ul>
-            <li className={this.state.activeTab === "wizard"? "is-active" : ""}>
-              <a onClick={() => this.setState({activeTab: 'wizard'})}>Wizard</a>
+            <li className={this.state.activeTab === FORM_WIZARD_TAB? "is-active" : ""}>
+              <a onClick={() => this.setState({activeTab: FORM_WIZARD_TAB})}>Wizard</a>
             </li>
-            <li className={this.state.activeTab === "snippet"? "is-active" : ""}>
-              <a onClick={() => this.setState({activeTab: 'snippet'})}>Snippet</a>
+            <li className={this.state.activeTab === FORM_SNIPPET_TAB? "is-active" : ""}>
+              <a onClick={() => this.setState({activeTab: FORM_SNIPPET_TAB})}>Snippet</a>
             </li>
           </ul>
         </div>
 
         <FormWizard
+          name={FORM_WIZARD_TAB}
           activeTab={this.state.activeTab}
         />
 
-
         <FormSnippet
-          name="snippet"
+          name={FORM_SNIPPET_TAB}
           activeTab={this.state.activeTab}
         />
 
