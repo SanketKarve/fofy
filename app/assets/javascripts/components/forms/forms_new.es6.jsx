@@ -11,6 +11,7 @@ class FormsNew extends React.Component {
       activeTab: FORM_WIZARD_TAB,
       formWizard: {
         formName: "",
+        formFields: [],
       },
     };
     // helper method
@@ -35,12 +36,19 @@ class FormsNew extends React.Component {
     this.setState({ formWizard });
   }
 
+
   handleFormComponentAdd(component) {
+    let formWizard = _cloneObject(this.state.formWizard);
+    let formFields = _cloneArray(formWizard.formFields);
+    formFields.push(this.getStateForComponent(component));
+    formWizard.formFields = formFields
+    this.setState({ formWizard });
+  }
+
+  getStateForComponent(component) {
     switch (component) {
-    case COMPONENT_TYPES.shortAnswer:
-
-      default:
-
+    case COMPONENT_TYPES.shortAnswer: return {};
+    default: return {};
     }
   }
 
