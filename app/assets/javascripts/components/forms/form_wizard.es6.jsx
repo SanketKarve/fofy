@@ -3,8 +3,6 @@
 class FormWizard extends React.Component {
   constructor(props) {
     super(props);
-
-    this.handleFormComponentAdd = this.handleFormComponentAdd.bind(this);
   }
 
   render () {

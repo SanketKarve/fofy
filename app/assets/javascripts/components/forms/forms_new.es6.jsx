@@ -38,7 +38,6 @@ class FormsNew extends React.Component {
     this.setState({ formWizard });
   }
 
-
   handleFormComponentAdd(component) {
     let formWizard = _cloneObject(this.state.formWizard);
     let formFields = _cloneArray(formWizard.formFields);
