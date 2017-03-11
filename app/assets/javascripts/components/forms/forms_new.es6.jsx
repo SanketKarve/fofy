@@ -47,7 +47,12 @@ class FormsNew extends React.Component {
 
   getStateForComponent(component) {
     switch (component) {
-    case COMPONENT_TYPES.shortAnswer: return {};
+    case COMPONENT_TYPES.shortAnswer: return {
+      type: component,
+      name: '',
+      validation: '',
+      requried: false,
+    };
     default: return {};
     }
   }
