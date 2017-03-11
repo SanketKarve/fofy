@@ -1,7 +1,7 @@
-const FORM_WIZARD_TAB = "form_wizard";
-const FORM_SNIPPET_TAB = "form_snippet";
+const FORM_WIZARD_TAB = 'form_wizard';
+const FORM_SNIPPET_TAB = 'form_snippet';
 const COMPONENT_TYPES = {
-  shortAnswer: "shortAnswer",
+  shortAnswer: 'shortAnswer',
 };
 
 class FormsNew extends React.Component {
@@ -10,7 +10,8 @@ class FormsNew extends React.Component {
     this.state = {
       activeTab: FORM_WIZARD_TAB,
       formWizard: {
-        formName: "",
+        formName: '',
+        formTheme: '',
         formFields: [],
       },
     };
@@ -20,6 +21,7 @@ class FormsNew extends React.Component {
 
     this.handleFormWizardStateChange = this.handleFormWizardStateChange.bind(this);
     this.handleFormComponentAdd = this.handleFormComponentAdd.bind(this);
+    this.getStateForComponent = this.getStateForComponent.bind(this);
   }
 
   _cloneArray(array) {
@@ -60,12 +62,12 @@ class FormsNew extends React.Component {
   render () {
     return (
       <div>
-        <div className="tabs">
+        <div className='tabs'>
           <ul>
-            <li className={this.state.activeTab === FORM_WIZARD_TAB? "is-active" : ""}>
+            <li className={this.state.activeTab === FORM_WIZARD_TAB? 'is-active' : ''}>
               <a onClick={() => this.setState({activeTab: FORM_WIZARD_TAB})}>Wizard</a>
             </li>
-            <li className={this.state.activeTab === FORM_SNIPPET_TAB? "is-active" : ""}>
+            <li className={this.state.activeTab === FORM_SNIPPET_TAB? 'is-active' : ''}>
               <a onClick={() => this.setState({activeTab: FORM_SNIPPET_TAB})}>Snippet</a>
             </li>
           </ul>
