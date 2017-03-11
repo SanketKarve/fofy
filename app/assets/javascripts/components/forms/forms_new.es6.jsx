@@ -33,8 +33,7 @@ class FormsNew extends React.Component {
           name={FORM_SNIPPET_TAB}
           activeTab={this.state.activeTab}
         />
-
-      </div>
+    </div>
     )
   }
 }
