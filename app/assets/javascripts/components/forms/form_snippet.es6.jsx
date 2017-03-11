@@ -13,3 +13,8 @@ class FormSnippet extends React.Component {
     )
   }
 }
+
+FormSnippet.propTypes = {
+  name: React.PropTypes.string.isRequired,
+  activeTab: React.PropTypes.string.isRequired,
+}

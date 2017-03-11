@@ -6,8 +6,18 @@ class FormsNew extends React.Component {
     super(props);
     this.state = {
       activeTab: FORM_WIZARD_TAB,
-
+      formWizard: {
+        formName: "",
+      },
     };
+
+    this.handleFormWizardStateChange = this.handleFormWizardStateChange.bind(this);
+  }
+
+  handleFormWizardStateChange(fieldName, fieldValue) {
+    let formWizard = Object.assign({}, this.state.formWizard);
+    formWizard[fieldName] = fieldValue;
+    this.setState({ formWizard });
   }
 
   render () {
@@ -27,6 +37,8 @@ class FormsNew extends React.Component {
         <FormWizard
           name={FORM_WIZARD_TAB}
           activeTab={this.state.activeTab}
+          formWizard={this.state.formWizard}
+          handleFormWizardStateChange={this.handleFormWizardStateChange}
         />
 
         <FormSnippet
