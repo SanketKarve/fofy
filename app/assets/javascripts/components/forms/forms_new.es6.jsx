@@ -21,6 +21,14 @@ class FormsNew extends React.Component {
           </ul>
         </div>
 
+        <FormWizard
+          activeTab={this.state.activeTab}
+        />
+
+        <FormSnippet
+          activeTab={this.state.activeTab}
+        />
+
 
 
 
