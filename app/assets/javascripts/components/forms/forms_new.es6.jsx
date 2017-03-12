@@ -11,7 +11,7 @@ class FormsNew extends React.Component {
       activeTab: FORM_WIZARD_TAB,
       formWizard: {
         formName: '',
-        formTheme: '',
+        formTheme: 'bootstrap',
         formFields: [],
       },
     };

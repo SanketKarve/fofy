@@ -1,11 +1,13 @@
-
-
 class FormWizard extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
   }
 
+
   render () {
+    const { name, activeTab } = this.props;
+    if(name !== activeTab) return null
+
     return (
       <div>
           <div className="is-clearfix">
@@ -15,7 +17,7 @@ class FormWizard extends React.Component {
                 <span className="select">
                   <select>
                     <option>Flat Theme</option>
-                    <option>Bootstrap</option>
+                    <option selected ="selected">Bootstrap</option>
                   </select>
                 </span>
               </p>
@@ -31,67 +33,20 @@ class FormWizard extends React.Component {
           <div className="distance">
 
 
-            <div className="card">
-              <div className="card-content">
-                <div className="content">
-                  <label className="label">
-                    Name<sup className="red">*</sup>
-                  <button className="delete is-pulled-right"></button>
-                  </label>
-                  <p className="control">
-                    <input className="input" type="text" placeholder="Jhon Doe"/>
-                  </p>
-                </div>
-              </div>
-            </div>
+          <FormField
+
+          />
+
+          <FormFieldEdit
+
+          />
 
 
-            <div className="card">
-              <div className="card-content">
-                <div className="content">
 
-                  <label className="label">Question</label>
-                  <p className="control">
-                    <input className="input" type="text" value="Name"/>
-                  </p>
-
-
-                  <label className="label">Placeholder</label>
-                  <p className="control">
-                    <input className="input" type="text" value="Jhon Doe"/>
-                  </p>
-
-
-                  <div className="is-clearfix">
-                    <div className="is-pulled-right">
-                        <span className="select">
-                          <select>
-                            <option>Text</option>
-                            <option>Number</option>
-                            <option>Email</option>
-                            <option>URL</option>
-                          </select>
-                        </span>
-                    </div>
-
-
-                    <label className="switch on" htmlFor="switch" title="required">
-                      <input type="checkbox" id="switch"/>
-                      <div className="slider"> </div>
-                    </label>
-                  </div>
-
-                </div>
-              </div>
-            </div>
 
             <div className="distance">
               <p className="control has-addons">
-                <a
-                  className="button is-large"
-                  title="Short Answer"
-                  onClick={this.props.handleFormComponentAdd}
-                >
+                <a className="button is-large" title="Short Answer">
                   <span className="icon is-medium">
                     <i className="fa fa-font"></i>
                   </span>
@@ -127,4 +82,9 @@ class FormWizard extends React.Component {
 
     )
   }
+}
+
+FormSnippet.propTypes = {
+  name: React.PropTypes.string.isRequired,
+  activeTab: React.PropTypes.string.isRequired,
 }
