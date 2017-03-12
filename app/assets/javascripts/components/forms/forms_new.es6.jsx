@@ -225,6 +225,99 @@ class FormsNew extends React.Component {
           </div>
         </div>
       </div>
+
+
+      {/** checkboxes   */}
+      <div className="card distance">
+        <div className="card-content">
+          <div className="content">
+            <label className="label">
+              Favorite Fruit<sup className="red"></sup>
+              <button className="delete is-pulled-right"></button>
+            </label>
+            <p className="control">
+              <label className="checkbox">
+                <input type="checkbox"/>
+                Apple
+              </label>
+            </p>
+            <p className="control">
+              <label className="checkbox">
+                <input type="checkbox"/>
+                Mango
+              </label>
+            </p>
+            <p className="control">
+              <label className="checkbox">
+                <input type="checkbox"/>
+                Orange
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-content">
+          <div className="content">
+
+            <label className="label">Question</label>
+            <p className="control">
+              <input className="input" type="text" value="Favorite Fruit?"/>
+            </p>
+
+
+            <label className="label">Options</label>
+            <div className="control">
+              <div className="columns">
+                <div className="column">
+                  <input className="input" type="text" value="Apple"/>
+                </div>
+                <div className="column is-narrow is-centered">
+                  <button className="delete is-pulled-right"></button>
+                </div>
+              </div>
+            </div>
+            <div className="control">
+              <div className="columns">
+                <div className="column">
+                  <input className="input" type="text" value="Mango"/>
+                </div>
+                <div className="column is-narrow is-centered">
+                  <button className="delete is-pulled-right"></button>
+                </div>
+              </div>
+            </div>
+            <div className="control">
+              <div className="columns">
+                <div className="column">
+                  <input className="input" type="text" value="Orange"/>
+                </div>
+                <div className="column is-narrow is-centered">
+                  <button className="delete is-pulled-right"></button>
+                </div>
+              </div>
+            </div>
+            <a className="button">
+              <span className="icon is-small">
+                <i className="fa fa-plus"></i>
+              </span>
+            </a>
+
+
+            <div className="is-clearfix">
+              <label className="label">
+                Required
+              </label>
+              <label className="switch on" htmlFor="switch" title="required">
+                <input type="checkbox" id="switch"/>
+                <div className="slider"> </div>
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
     )
   }
