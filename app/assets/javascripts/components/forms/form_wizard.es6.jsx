@@ -34,35 +34,14 @@ class FormWizard extends React.Component {
 
 
           <FormField
-
+          
           />
 
           <FormFieldEdit
-                  <div className="is-clearfix">
-                    <div className="is-pulled-right">
-                      <label className="label">
-                        Validation
-                      </label>
-                      <span className="select">
-                        <select>
-                          <option>Text</option>
-                          <option>Number</option>
-                          <option>Email</option>
-                          <option>URL</option>
-                        </select>
-                      </span>
-                    </div>
 
-
-                    <label className="label">
-                      Required
-                    </label>
-                    <label className="switch on" htmlFor="switch" title="required">
-                      <input type="checkbox" id="switch"/>
-                      <div className="slider"> </div>
-                    </label>
-                  </div>
           />
+
+
 
 
             <div className="distance">
