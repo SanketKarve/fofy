@@ -28,6 +28,11 @@
   width: 50px;
 }
 
+.is-centered {
+  display: flex;
+  align-items: center;
+}
+
 .red {
   color: $red;
 }

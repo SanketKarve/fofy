@@ -174,10 +174,42 @@ class FormsNew extends React.Component {
             </p>
 
 
-            <label className="label">Placeholder</label>
-            <p className="control">
-              <input className="input" type="text" value="Your valuable feedback here..."/>
-            </p>
+            <label className="label">Options</label>
+            <div className="control">
+              <div className="columns">
+                <div className="column">
+                  <input className="input" type="text" value="Apple"/>
+                </div>
+                <div className="column is-narrow is-centered">
+                  <button className="delete is-pulled-right"></button>
+                </div>
+              </div>
+            </div>
+            <div className="control">
+              <div className="columns">
+                <div className="column">
+                  <input className="input" type="text" value="Mango"/>
+                </div>
+                <div className="column is-narrow is-centered">
+                  <button className="delete is-pulled-right"></button>
+                </div>
+              </div>
+            </div>
+            <div className="control">
+              <div className="columns">
+                <div className="column">
+                  <input className="input" type="text" value="Orange"/>
+                </div>
+                <div className="column is-narrow is-centered">
+                  <button className="delete is-pulled-right"></button>
+                </div>
+              </div>
+            </div>
+            <a className="button">
+              <span className="icon is-small">
+                <i className="fa fa-plus"></i>
+              </span>
+            </a>
 
 
             <div className="is-clearfix">
