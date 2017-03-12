@@ -84,6 +84,115 @@ class FormsNew extends React.Component {
           name={FORM_SNIPPET_TAB}
           activeTab={this.state.activeTab}
         />
+
+      {/** paragaph */}
+      <div className="card distance">
+        <div className="card-content">
+          <div className="content">
+            <label className="label">
+              Feedback<sup className="red">*</sup>
+            <button className="delete is-pulled-right"></button>
+            </label>
+            <p className="control">
+              <textarea
+                className="textarea"
+                type="text"
+                placeholder="Your valuable feedback here..."/>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-content">
+          <div className="content">
+
+            <label className="label">Question</label>
+            <p className="control">
+              <input className="input" type="text" value="Feedback"/>
+            </p>
+
+
+            <label className="label">Placeholder</label>
+            <p className="control">
+              <input className="input" type="text" value="Your valuable feedback here..."/>
+            </p>
+
+
+            <div className="is-clearfix">
+              <label className="label">
+                Required
+              </label>
+              <label className="switch on" htmlFor="switch" title="required">
+                <input type="checkbox" id="switch"/>
+                <div className="slider"> </div>
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      {/** multiple choice   */}
+      <div className="card distance">
+        <div className="card-content">
+          <div className="content">
+            <label className="label">
+              Favorite Fruit<sup className="red"></sup>
+              <button className="delete is-pulled-right"></button>
+            </label>
+            <p className="control">
+              <label className="radio">
+                <input type="radio"/>
+                Apple
+              </label>
+            </p>
+            <p className="control">
+              <label className="radio">
+                <input type="radio"/>
+                Mango
+              </label>
+            </p>
+            <p className="control">
+              <label className="radio">
+                <input type="radio"/>
+                Orange
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-content">
+          <div className="content">
+
+            <label className="label">Question</label>
+            <p className="control">
+              <input className="input" type="text" value="Favorite Fruit?"/>
+            </p>
+
+
+            <label className="label">Placeholder</label>
+            <p className="control">
+              <input className="input" type="text" value="Your valuable feedback here..."/>
+            </p>
+
+
+            <div className="is-clearfix">
+              <label className="label">
+                Required
+              </label>
+              <label className="switch on" htmlFor="switch" title="required">
+                <input type="checkbox" id="switch"/>
+                <div className="slider"> </div>
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
     )
   }
