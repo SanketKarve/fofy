@@ -1,13 +1,14 @@
 <nav class="nav has-shadow" id="nav">
   <div class="container">
     <div class="nav-left">
-      <a class="nav-item">
+      <a class="nav-item" href="<%= '/forms' %>">
         <span class="icon">
           <i class="fa fa-sticky-note"></i>
         </span>
         <h1 class="title">FoFy</h1>
       </a>
-      <a class="nav-item <%= class_active('forms') %>" href="/forms">Forms</a>
+      <a class="nav-item <%= class_active('forms') %>" href="/forms/index">Forms</a>
+      <a class="nav-item <%= class_active('charges') %>" href="/charges/new">Payment</a>
     </div>
     <div class="nav-right nav-menu">
       <div class="nav-item">

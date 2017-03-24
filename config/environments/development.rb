@@ -7,7 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   #react-rails
-  config.react.variant = :development 
+  config.react.variant = :development
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -54,4 +54,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # setting environment variable for STRIPE CHECKOUT API for test mode
+      ENV['PUBLISHABLE_KEY'] = 'sk_test_s1IqPfWAKwlpfkrNdSm8Q8Ul'
+      ENV['SECRET_KEY'] = 'pk_test_agnQWfUT2iDkhEu6okCuABqr'
 end

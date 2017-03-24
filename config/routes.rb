@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :forms
   resources :form_data, only: [:create]
+  resources :charges
 end
